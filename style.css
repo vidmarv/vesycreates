@@ -1,0 +1,39 @@
+@font-face { font-family: "Montserrat"; font-weight: 900; src: url("fonts/Montserrat-Black.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Caveat"; font-weight: 700; src: url("fonts/Caveat-Bold.ttf") format("truetype"); font-display: swap; }
+
+:root {
+  --purple: #390075; --plum: #793775; --mauve: #af7bbd; --lilac: #cab3e7; --mist: #dbd9e7;
+  --bg: #fbfaff; --text: #241b2f; --card: #fff;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+a { color: var(--plum); }
+h1, h2, .logo { font-family: "Montserrat", system-ui, sans-serif; font-weight: 900; color: var(--purple); line-height: 1.2; }
+h1 { font-size: 2rem; margin: 8px 0 12px; }
+h2 { font-size: 1.3rem; margin: 40px 0 14px; }
+
+.top { background: var(--purple); padding: 14px 16px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 20px; }
+.logo { color: #fff; text-decoration: none; font-size: 1.4rem; }
+.top nav { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.top nav a { color: var(--lilac); text-decoration: none; font-weight: 600; }
+.top nav a:hover, .top nav a[aria-current] { color: #fff; }
+
+main { max-width: 1040px; margin: 0 auto; padding: 16px 16px 48px; }
+.hero { background: var(--mist); border-radius: 16px; padding: 28px 20px; text-align: center; margin-top: 12px; }
+.hero p { max-width: 640px; margin: 0 auto 20px; }
+.hand { font-family: "Caveat", cursive; color: var(--plum); font-size: 1.2em; }
+.btn { display: inline-block; background: var(--purple); color: #fff; text-decoration: none; font-weight: 700; padding: 12px 22px; border-radius: 999px; }
+.btn:hover { background: var(--plum); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.card { position: relative; display: block; background: var(--card); border-radius: 12px; overflow: hidden; text-decoration: none; color: var(--text); box-shadow: 0 1px 4px rgba(57, 0, 117, .12); }
+a.card:hover { box-shadow: 0 4px 14px rgba(57, 0, 117, .25); }
+.card img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--mist); }
+.card h3 { font-size: .95rem; margin: 10px 12px 12px; }
+.card.soon img { opacity: .55; }
+.badge { position: absolute; top: 8px; left: 8px; background: var(--mauve); color: #fff; font-size: .8rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
+.more { margin-top: 18px; font-weight: 600; }
+
+footer { background: var(--purple); color: var(--lilac); text-align: center; padding: 20px 16px; font-size: .9rem; }
+footer a { color: #fff; }
+footer p { margin: 4px 0; }
