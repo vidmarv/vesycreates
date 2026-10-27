@@ -33,6 +33,11 @@ a.card:hover { box-shadow: 0 4px 14px rgba(57, 0, 117, .25); }
 .card.soon img { opacity: .55; }
 .badge { position: absolute; top: 8px; left: 8px; background: var(--mauve); color: #fff; font-size: .8rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
 .more { margin-top: 18px; font-weight: 600; }
+@media (max-width: 520px) {
+  .grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .card h3 { font-size: .85rem; margin: 8px 10px 10px; }
+  h1 { font-size: 1.6rem; }
+}
 
 footer { background: var(--purple); color: var(--lilac); text-align: center; padding: 20px 16px; font-size: .9rem; }
 footer a { color: #fff; }
