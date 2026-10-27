@@ -1,4 +1,4 @@
-@font-face { font-family: "Montserrat"; font-weight: 900; src: url("fonts/Montserrat-Black.ttf") format("truetype"); font-display: swap; }
+﻿@font-face { font-family: "Montserrat"; font-weight: 900; src: url("fonts/Montserrat-Black.ttf") format("truetype"); font-display: swap; }
 @font-face { font-family: "Caveat"; font-weight: 700; src: url("fonts/Caveat-Bold.ttf") format("truetype"); font-display: swap; }
 
 :root {
@@ -34,7 +34,7 @@ a.card:hover { box-shadow: 0 4px 14px rgba(57, 0, 117, .25); }
 .badge { position: absolute; top: 8px; left: 8px; background: var(--mauve); color: #fff; font-size: .8rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
 .more { margin-top: 18px; font-weight: 600; }
 @media (max-width: 520px) {
-  .grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .card h3 { font-size: .85rem; margin: 8px 10px 10px; }
   h1 { font-size: 1.6rem; }
 }
