@@ -46,3 +46,6 @@ a.card:hover { box-shadow: 0 4px 14px rgba(57, 0, 117, .25); }
 footer { background: var(--purple); color: var(--lilac); text-align: center; padding: 20px 16px; font-size: .9rem; }
 footer a { color: #fff; }
 footer p { margin: 4px 0; }
+.intro { display: flex; align-items: center; gap: 28px; margin: 8px 0 12px; }
+.portrait { width: 220px; height: 220px; border-radius: 50%; flex: none; }
+@media (max-width: 620px) { .intro { flex-direction: column; text-align: center; gap: 12px; } .portrait { width: 180px; height: 180px; } }
