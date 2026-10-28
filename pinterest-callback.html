@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Pinterest login – VesyCreates</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .box { font-family: Consolas, monospace; font-size: 1.1rem; background: #fff; border: 2px solid var(--mauve); border-radius: 12px; padding: 14px; word-break: break-all; margin: 12px 0; }
+</style>
+</head>
+<body>
+<header class="top"><a class="logo" href="index.html">VesyCreates</a></header>
+<main>
+<h1>Pinterest login</h1>
+<div id="out"><p>No code in the address.</p></div>
+</main>
+<script>
+  // Shows the one-time code from Pinterest so Vesna can copy it to her own tool. Nothing is sent anywhere.
+  var q = new URLSearchParams(location.search), out = document.getElementById('out');
+  if (q.get('code')) {
+    var text = q.get('code') + ' ' + (q.get('state') || '');
+    out.innerHTML = '<p>Copy this line and paste it to Claude:</p><div class="box" id="c"></div>' +
+      '<button class="btn" id="b" type="button">Copy</button>';
+    document.getElementById('c').textContent = text;
+    document.getElementById('b').onclick = function () {
+      navigator.clipboard.writeText(text).then(function () { document.getElementById('b').textContent = 'Copied ✓'; });
+    };
+  } else if (q.get('error')) {
+    out.textContent = 'Pinterest error: ' + q.get('error') + ' ' + (q.get('error_description') || '');
+  }
+</script>
+</body>
+</html>
