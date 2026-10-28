@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /pinterest-callback
+Sitemap: https://vesycreates.com/sitemap.xml
